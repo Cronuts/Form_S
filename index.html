@@ -10,11 +10,23 @@
     <h2 id="name">${userName}</h2>
 
     <script>
-    const userEmail = document.getElementById('user-data')?.dataset?.userEmail?.trim();
-    const userName = document.getElementById('user-data')?.dataset?.userName?.trim();
-
-    document.getElementById('email').textContent = userEmail || 'Email no disponible';
-    document.getElementById('name').textContent = userName || 'Nombre no disponible';
+    window.addEventListener('message', (event) => {
+      if(event.origin !== 'https://traspasodental.preview.softr.app') {
+        // Ignorar mensajes que no vengan de Softr
+        return;
+      }
+    
+      const data = event.data;
+      if(data.email && data.name) {
+        // Aquí recibes los datos y haces lo que necesites
+        document.getElementById('email').textContent = data.email;
+        document.getElementById('name').textContent = data.name;
+        
+        // También puedes guardarlos en variables globales si quieres
+        window.userEmailGlobal = data.email;
+        window.userNameGlobal = data.name;
+      }
+    });
     </script>
 </body>
 </html>
