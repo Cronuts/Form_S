@@ -1,5 +1,6 @@
 const userEmail = document.getElementById('user-data')?.dataset?.userEmail?.trim();
 const userName = document.getElementById('user-data')?.dataset?.userName?.trim();
+console.log(userEmail, userName)
 
 const camposArchivos = [
     "documento_pyg_autonomo",
