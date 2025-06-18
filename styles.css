@@ -1,0 +1,93 @@
+    #custom-code1{
+        min-height: 100vh
+    }
+
+    .file-input-group{
+        display: flex;
+        gap:10px
+    }
+    
+    .input-file-wrapper {
+    display: inline-block;
+    padding: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    color: #4E5362;
+    margin-top:10px;
+    margin-bottom: 10px;
+    }
+    
+    .input-file-wrapper button{
+        background-color:#F5C23D;
+    }
+    
+    #form-container {
+        max-width: 1200px;
+        margin: auto;
+        font-family: Arial, sans-serif;
+        padding: 4em;
+        color:white;
+    }
+    
+
+    .seccion {
+        display: none;
+        margin-bottom: 20px;
+    }
+
+    .seccion.active {
+        display: block;
+    }
+
+    label {
+        display: block;
+        margin-top: 20px;
+        font-size:18px;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        border-radius:7px;
+        padding: 1em;
+        margin-top: 6px;
+        box-sizing: border-box;
+    }
+
+    .botones {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    button {
+        border: 1px solid white;
+        background-color: transparent;
+        padding: 10px 30px;
+        font-size:18px;
+        cursor: pointer;
+        border-radius:20px;
+        color: white;
+        font-weight: bold;
+    }
+    
+   .botones button:not([disabled]):hover {
+    transition: all 0.5s ease-out;
+    border: 1px solid #4E5362; 
+    background-color: #E3D8AC;
+    color: #4E5362;
+    }
+
+    button[disabled] {
+        opacity: 0.5;
+        cursor: default;
+    }
+    
+    h2{
+        font-size:38px;
+     }
+     
