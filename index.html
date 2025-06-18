@@ -3,12 +3,18 @@
 <head>
 <title>Formulario</title>
 <link rel="stylesheet" href="css/styles.css">
+
 </head>
 <body>
-  <script>
+    <h2 id="email">${userEmail}</h2>
+    <h2 id="name">${userName}</h2>
+
+    <script>
     const userEmail = document.getElementById('user-data')?.dataset?.userEmail?.trim();
     const userName = document.getElementById('user-data')?.dataset?.userName?.trim();
-    console.log(`A A A ${userEmail}, ${userName}`)
-  </script>
+
+    document.getElementById('email').textContent = userEmail || 'Email no disponible';
+    document.getElementById('name').textContent = userName || 'Nombre no disponible';
+    </script>
 </body>
 </html>
